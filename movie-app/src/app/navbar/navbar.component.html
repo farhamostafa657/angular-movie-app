@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg fixed-top header">
+  <div class="container-fluid">
+    <a class="navbar-brand fs-3 logo" href="#">Movie App</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      class="offcanvas offcanvas-end"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Offcanvas</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="offcanvas-body data fs-4">
+        <ul
+          class="navbar-nav justify-content-end flex-grow-1 pe-3 d-flex align-items-center"
+        >
+          <li class="nav-item dropdown me-4">
+            <select
+              class="nav-link dropdown-toggle lang-dropdown"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <option class="nav-item" value="En">En</option>
+              <option class="nav-item" value="Ar">Ar</option>
+            </select>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <i class="fa-solid fa-heart me-2"></i>
+              <span class="watchlist">Watchlist</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -1,0 +1,45 @@
+.container {
+  margin-top: 7rem;
+  background-color: #f7ede2;
+  height: 18rem;
+}
+
+.bttun {
+  background-color: #f6bd60;
+  outline: none;
+  border: none;
+  border-radius: 3rem;
+  color: #f7ede2;
+  padding: 0.4rem;
+  padding-left: 0.7rem;
+  padding-right: 0.7rem;
+  text-align: center;
+}
+
+.bttun:hover {
+  background-color: #f7ede2;
+  color: #f6bd60;
+  border: 1px solid #f6bd60;
+}
+
+.search {
+  border: none;
+  outline: none;
+  border-radius: 3rem;
+  padding: 4rem;
+  text-indent: 1.5rem;
+  color: gray;
+}
+.search::placeholder {
+  color: #f6bd60;
+  padding-left: 1rem;
+}
+
+.search:focus,
+.search:hover {
+  outline: none;
+  border: none;
+  box-shadow: 0.1rem 0.1rem 0.6rem 0.2rem #f6bd60;
+}
+.search::first-letter {
+}

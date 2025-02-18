@@ -1,0 +1,36 @@
+.data {
+  text-align: center;
+}
+
+.header {
+  background-color: #f6bd60;
+}
+
+.logo {
+  font-weight: bolder;
+}
+.logo:hover,
+.watchlist:hover {
+  color: #f7ede2;
+}
+
+/* Style the select dropdown */
+.lang-dropdown {
+  background-color: transparent;
+  border: none !important;
+  font-size: 1rem;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+/* Add hover and focus effect */
+.lang-dropdown:focus,
+.lang-dropdown:hover {
+  outline: none !important;
+  border: none !important;
+  background-color: rgba(255, 255, 255, 0.2) !important;
+}
+
+.fa-solid:hover {
+  color: #f28482;
+}
