@@ -1,3 +1,65 @@
-<div class="container mt-5">
-  <p class="fs-2 fw-medium">Now Playing</p>
+<div class="container-fluid mx-auto mb-5 p-5 bg-dark">
+  <p class="fs-2 fw-medium text-white">Now Playing</p>
+
+  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+    @for (movie of movieList; track movie.id) {
+    <div class="col">
+      <div class="card">
+        <img
+          [src]="'https://image.tmdb.org/t/p/w500/' + movie.poster_path"
+          class="card-img-top h-100 img position-relative"
+          alt="..."
+        />
+        <svg
+          width="50"
+          height="50"
+          xmlns="http://www.w3.org/2000/svg"
+          class="svg"
+        >
+          <circle
+            cx="25"
+            cy="25"
+            r="22"
+            stroke="#444"
+            stroke-width="4"
+            fill="none"
+          />
+          <circle
+            cx="25"
+            cy="25"
+            r="22"
+            stroke="#4caf50"
+            stroke-width="3"
+            fill="#212529"
+            stroke-dasharray="113"
+          ></circle>
+          <text x="25" y="30" font-size="13" text-anchor="middle" fill="white">
+            70%
+          </text>
+        </svg>
+
+        <div class="card-body">
+          <h5 class="text-white text-capitalize">{{ movie.title }}</h5>
+          <div class="d-flex justify-content-between">
+            <p class="text-secondary">
+              {{ movie.release_date | date : "mediumDate" }}
+            </p>
+            <i
+              [ngClass]="{
+                  'fa-regular': !isHovered || !ismouseEnter,
+                  'fa-solid text-warning': isHovered ||ismouseEnter,
+                  
+                }"
+              class="fa-heart love"
+              (mouseenter)="toggleHeartHover(true)"
+              (mouseleave)="toggleHeartHover(false)"
+              (click)="toggleHeart()"
+            >
+            </i>
+          </div>
+        </div>
+      </div>
+    </div>
+    }
+  </div>
 </div>

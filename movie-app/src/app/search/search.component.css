@@ -1,7 +1,11 @@
-.container {
-  margin-top: 7rem;
-  background-color: #f7ede2;
-  height: 18rem;
+.content {
+  margin-top: 4.5rem;
+  height: 50vh;
+  background-color: white !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../../public/assets/movie.jpg");
+  background-position: center;
+  background-size: cover;
 }
 
 .bttun {
@@ -25,7 +29,7 @@
 .search {
   border: none;
   outline: none;
-  border-radius: 3rem;
+  border-radius: 0.7rem;
   padding: 4rem;
   text-indent: 1.5rem;
   color: gray;
@@ -40,6 +44,4 @@
   outline: none;
   border: none;
   box-shadow: 0.1rem 0.1rem 0.6rem 0.2rem #f6bd60;
-}
-.search::first-letter {
 }

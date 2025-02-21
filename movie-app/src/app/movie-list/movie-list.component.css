@@ -1,0 +1,36 @@
+.card-body {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  margin-top: -30px;
+}
+
+.card {
+  background-color: transparent !important;
+  border: none !important;
+  outline: none;
+  height: 30rem !important;
+}
+.img {
+  border-radius: 0.7rem;
+}
+
+.love {
+  color: #f6bd60;
+  font-size: 1.7rem;
+  background-color: transparent;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.text-warning {
+  color: #f6bd60 !important;
+}
+
+.svg {
+  top: -28px;
+  left: 20px;
+  position: relative;
+  overflow: visible;
+  height: 40px;
+}
