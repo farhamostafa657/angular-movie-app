@@ -1,9 +1,17 @@
 import { CommonModule, DatePipe } from '@angular/common';
-import { Component } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  inject,
+  Input,
+  Output,
+  output,
+} from '@angular/core';
 import { MovieRequestServiceService } from '../services/movie-request-service.service';
 import { NgxPaginationModule } from 'ngx-pagination'; // <-- import the module
 import { RouterLink } from '@angular/router';
 import { TruncatePipe } from '../pipes/truncate.pipe';
+import { SearchItemService } from '../services/search-item.service';
 
 @Component({
   selector: 'app-movie-list',
@@ -27,6 +35,10 @@ export class MovieListComponent {
   numPages: number[] = [];
   currentPage: number = this.p;
   Math = Math;
+  filterMovie: any;
+  search: string = '';
+
+  searchService = inject(SearchItemService);
 
   constructor(private movieRequist: MovieRequestServiceService) {}
 
@@ -39,6 +51,11 @@ export class MovieListComponent {
   }
 
   ngOnInit() {
+    this.searchService.getFilterMovie().subscribe((res: any) => {
+      this.filterMovie = res.results || [];
+      console.log(this.filterMovie.length);
+    });
+
     this.loadMovies();
   }
 

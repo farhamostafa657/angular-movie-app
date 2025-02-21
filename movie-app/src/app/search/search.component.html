@@ -14,8 +14,9 @@
         type="text"
         class="form-control me-3 search p-2"
         placeholder="search"
+        [(ngModel)]="searchTrem"
       />
-      <button class="bttun">search</button>
+      <button class="bttun" (click)="handleSearchBtn()">search</button>
     </div>
   </div>
 </div>
