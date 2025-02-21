@@ -2,7 +2,7 @@
   <p class="fs-2 fw-medium text-white">Now Playing</p>
 
   <div class="row row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
-    @for (movie of movieList; track movie.id) {
+    @for (movie of movieList; track movie.id ) {
     <div class="col">
       <div class="card">
         <img
@@ -62,4 +62,54 @@
     </div>
     }
   </div>
+
+  <nav aria-label="Page navigation example">
+    <ul class="pagination">
+      <li class="page-item">
+        <a
+          class="page-link"
+          routerLink="#"
+          aria-label="Previous"
+          (click)="handlePagePrev(currentPage - 1)"
+        >
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+
+      <li class="page-item">
+        <a
+          class="page-link"
+          routerLink="#"
+          (click)="handleCurrentPage(currentPage)"
+          >{{ currentPage }}</a
+        >
+      </li>
+      <li class="page-item">
+        <a
+          class="page-link"
+          routerLink="#"
+          (click)="handleCurrentPage(currentPage + 1)"
+          >{{ currentPage + 1 }}</a
+        >
+      </li>
+      <li class="page-item">
+        <a
+          class="page-link"
+          routerLink="#"
+          (click)="handleCurrentPage(currentPage + 2)"
+          >{{ currentPage + 2 }}</a
+        >
+      </li>
+      <li class="page-item">
+        <a
+          class="page-link"
+          routerLink="#"
+          aria-label="Next"
+          (click)="handlePageNext(currentPage + 1)"
+        >
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>

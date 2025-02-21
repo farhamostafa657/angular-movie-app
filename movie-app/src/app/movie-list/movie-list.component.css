@@ -34,3 +34,25 @@
   overflow: visible;
   height: 40px;
 }
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.pagination {
+  --bs-pagination-bg: #212529;
+  --bs-pagination-color: gray;
+  --bs-pagination-border-color: #f6bd60;
+  --bs-pagination-hover-bg: #f6bd60;
+  --bs-pagination-active-border-color: #f6bd60;
+  --bs-pagination-hover-color: none;
+  --bs-pagination-focus-color: #f6bd60;
+  --bs-pagination-focus-bg: var(--bs-secondary-bg);
+  --bs-pagination-focus-box-shadow: 0.2rem 0.2rem 0 0.25rem rgba(0, 0, 0, 0.2);
+  --bs-pagination-active-color: #gray;
+  --bs-pagination-active-bg: #f6bd60;
+  --bs-pagination-active-border-color: #f6bd60;
+}

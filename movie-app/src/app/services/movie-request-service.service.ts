@@ -9,7 +9,9 @@ import { HttpClient } from '@angular/common/http';
 export class MovieRequestServiceService {
   constructor(private http: HttpClient) {}
 
-  getMovieList(): Observable<any> {
-    return this.http.get(`${environment.baseURL}${environment.apiKey}`);
+  getMovieList(page: number): Observable<any> {
+    return this.http.get(
+      `${environment.baseURL}${environment.apiKey}&page=${page}`
+    );
   }
 }

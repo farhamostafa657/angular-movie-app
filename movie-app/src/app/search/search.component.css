@@ -1,11 +1,17 @@
+.conta {
+  background-color: #212529;
+  width: 100%;
+}
 .content {
-  margin-top: 4.5rem;
-  height: 50vh;
-  background-color: white !important;
+  margin-top: 6rem;
+  height: 60vh;
+
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
     url("../../../public/assets/movie.jpg");
   background-position: center;
   background-size: cover;
+  width: 99%;
+  border-radius: 0.5rem;
 }
 
 .bttun {
