@@ -56,3 +56,7 @@ nav {
   --bs-pagination-active-bg: #f6bd60;
   --bs-pagination-active-border-color: #f6bd60;
 }
+
+.text-white {
+  white-space: nowrap;
+}

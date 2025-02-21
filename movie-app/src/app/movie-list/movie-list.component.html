@@ -31,15 +31,19 @@
             stroke="#4caf50"
             stroke-width="3"
             fill="#212529"
-            stroke-dasharray="113"
+            [attr.stroke-dasharray]="
+              2 * Math.PI * 22 * (movie.vote_average / 10) + ', 1000'
+            "
           ></circle>
           <text x="25" y="30" font-size="13" text-anchor="middle" fill="white">
-            70%
+            {{ Math.round(movie.vote_average * 10) }}%
           </text>
         </svg>
 
         <div class="card-body">
-          <h5 class="text-white text-capitalize">{{ movie.title }}</h5>
+          <h5 class="text-white text-capitalize">
+            {{ movie.title | truncate }}
+          </h5>
           <div class="d-flex justify-content-between">
             <p class="text-secondary">
               {{ movie.release_date | date : "mediumDate" }}

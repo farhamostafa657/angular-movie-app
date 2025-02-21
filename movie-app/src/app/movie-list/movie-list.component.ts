@@ -3,10 +3,17 @@ import { Component } from '@angular/core';
 import { MovieRequestServiceService } from '../services/movie-request-service.service';
 import { NgxPaginationModule } from 'ngx-pagination'; // <-- import the module
 import { RouterLink } from '@angular/router';
+import { TruncatePipe } from '../pipes/truncate.pipe';
 
 @Component({
   selector: 'app-movie-list',
-  imports: [CommonModule, DatePipe, NgxPaginationModule, RouterLink],
+  imports: [
+    CommonModule,
+    DatePipe,
+    NgxPaginationModule,
+    RouterLink,
+    TruncatePipe,
+  ],
   templateUrl: './movie-list.component.html',
   styleUrl: './movie-list.component.css',
 })
@@ -19,6 +26,7 @@ export class MovieListComponent {
   total: number = 0;
   numPages: number[] = [];
   currentPage: number = this.p;
+  Math = Math;
 
   constructor(private movieRequist: MovieRequestServiceService) {}
 
